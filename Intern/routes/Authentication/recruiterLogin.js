@@ -22,6 +22,7 @@ var postData = function(request, response) {
         }
 
         // Set the session for the user.
+        
         request.session.user = recruiter;
 
         response.redirect("/recruiterDash");

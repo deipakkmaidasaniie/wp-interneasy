@@ -1,6 +1,6 @@
 Database Schema
 
-Database Name - Udyog
+Database Name - interneasy
 Database Collections - 
         1. students - ( 
                 { email: "text", password: "text",

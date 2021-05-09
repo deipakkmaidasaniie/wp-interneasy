@@ -11,14 +11,48 @@ var postData = function(request, response) {
 
     var user = {
         userName: request.body.userName,
-        password: request.body.password
+        password: request.body.password,
+        email: request.body.email,
+        city: request.body.city,
+        dob: request.body.dob
     };
 
     if(user.password == confirmPassword) {
         DB.collection("students").insertOne(user, function(error) {
             if(error) {
                 response.send("error occured while signup");
-            } else {
+            } 
+            else {
+
+                if (Notification.permission === "granted") {
+                    showNotification();
+                }
+    
+                else if (Notification.permission != "denied") {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === "granted" && flag === 1) {
+                            showNotification();
+                        }
+    
+                    })
+                }
+    
+                 function showNotification() {
+                    const notification = new Notification("New message from Deepak!", {
+                        body: "Hey! You have selected a great list of fruits.",
+                        icon: "fruits.jpg"
+                    });
+                    notification.onclick = function () {
+                        alert("Notification clicked!"),
+                            window.open("http://google.com")
+                          //  showNotification();
+                    };                
+                
+                    //notification.close();
+                    setTimeout(notification.close.bind(notification), 7000); 
+    
+                }
+            
                 request.session.user = null;
                 response.redirect("/");
             }
@@ -28,6 +62,7 @@ var postData = function(request, response) {
         response.redirect("/signupStudent");
     }
 }
+
 
 exports.getData = getData;
 exports.postData = postData;

@@ -1,5 +1,5 @@
 "use strict";
-
+//require('dotenv').config({ path: 'config.env' })
 //External packages
 var express = require("express");
 var bodyParser = require("body-parser");
@@ -32,16 +32,16 @@ app.use(express.static('public'));
 
 //connect to mongodb
 var DB;
-var DB_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/udyog';
+var DB_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/interneasy';
 
 var mongoClient = new mongodb.MongoClient(DB_URL, {useNewUrlParser: true});
 mongoClient.connect(function(err) {
     if(err) {
         console.log("Error connecting to MongoDB");
     } else {
-        console.log("Connection to MongoDB database udyog established");
+        console.log("Connection to MongoDB database interneasy established");
     }
-    DB = mongoClient.db("udyog");
+    DB = mongoClient.db("interneasy");
 
     //save the DB variable for all routes
     app.locals.DB = DB;

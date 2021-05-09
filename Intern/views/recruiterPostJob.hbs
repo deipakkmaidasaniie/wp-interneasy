@@ -1,7 +1,7 @@
 <!--
     Author: Srinivas Namballa
     Date Created: 09/04/2019
-    Description: This html page is used to post jobs by recruiters at Udyog.com
+    Description: This html page is used to post jobs by recruiters at interneasy.com
 -->
 
 <!DOCTYPE html>
@@ -10,13 +10,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Udyog.com - Recruiter Post Job</title>
+    <title>Post Internship</title>
+        <link rel="stylesheet" href="CSS/index_css.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
+
+    <!--
     <nav class="navbar navbar-dark bg-dark">
-        <h2 class="text-white">Udyog.com - Recruiter Post Job</h2>
+        <h2 class="text-white">interneasy.com - Recruiter Post Job</h2>
 
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
@@ -33,15 +36,27 @@
             </nav>
         </div>
     </nav>
+-->
+
+<nav class="header" style="width:100%">
+        <a href="#default" class="logo">InternEasy</a>
+        <div class="header-right">
+          <a class="active" href="/recruiterDash">Home</a>
+          <a href="/recruiterProfile">Edit Profile</a>
+          <a href="/recruiterLogout">Logout</a>
+
+      
+        </div>
+      </nav>
 
     <br>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-color: lightskyblue;">
         <div class="row">
             <div class="offset-md-4 col-md-4">
                 <form action="/recruiterPostJob" method="POST">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Job Title</label>
+                        <label for="exampleInputEmail1">Internship Position</label>
                         <input type="text" class="form-control"
                         id="jobTitle" name="jobTitle"
                         aria-describedby="emailHelp"
@@ -49,7 +64,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Job Description</label>
+                        <label for="exampleInputEmail1">Internship Description</label>
                         <textarea class="form-control" name="jobDescription" id="jobDescription" cols="46" rows="5" placeholder="Enter Profile Summary"></textarea>
                     </div>
 
@@ -70,6 +85,14 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="exampleInputEmail1">Duration</label>
+                        <input type="number" class="form-control"
+                        id="duration" name="duration"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter Internship Duration">
+                    </div>
+
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Desired Candidate Profile</label>
                         <textarea class="form-control" name="desiredCandidates" id="desiredCandidates" cols="46" rows="5" placeholder="Enter Desired Candidate Profile"></textarea>
                     </div>
@@ -77,6 +100,14 @@
                     <div class="form-group">
                         <label for="exampleInputEmail1">Organization Profile</label>
                         <textarea class="form-control" name="organizationProfile" id="organizationProfile" cols="46" rows="5" placeholder="Enter Organization Profile"></textarea>
+                    </div>
+
+                   <div class="form-group">
+                        <label for="exampleInputEmail1">Stipend</label>
+                        <input type="number" class="form-control"
+                        id="stipend" name="stipend"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter Internship Stipend per month">
                     </div>
 
                     <p></p>

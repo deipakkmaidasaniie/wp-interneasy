@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,body{
+    display: grid;
+    place-items: center;
+    background:#4158d0;
+  }
+  
+  .wrapper{
+    overflow: hidden;
+    max-width: 700px;
+    margin-top: 20px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+  }
+  .wrapper .title-text{
+    display: flex;
+    width: 200%;
+  }
+  .wrapper .title{
+    width: 50%;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    transition: 0.5s
+  }
+  .wrapper .slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin: 30px 0;
+    border: 1px solid rgb(186, 186, 186);
+    }
+  .slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1;
+    transition: 1s;
+  }
+  .slide-controls label.recruiter{
+    color: #000;
+  }
+  .slide-controls .slider-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    background: #4158d0;
+    transition: 0.5s;
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  #recruiter:checked ~ .slider-tab{
+    left: 50%;
+  }
+  #recruiter:checked ~ label.recruiter{
+    color: #fff;
+  }
+  #recruiter:checked ~ label.student{
+    color: #000;
+  }
+  #student:checked ~ label.student{
+    color: #fff
+  }
+  #student:checked ~ label.recruiter{
+    color: #000;
+  }
+  
+  .wrapper .form-container{
+    width: 100%;
+    overflow: hidden;
+  }
+  .form-container .form-inner{
+    padding-left: 10px;
+    display: flex;
+    width: 200%;
+  }
+  /* 
+  .form-inner form .dob{
+    display: flex;
+    justify-content: space-around;
+  }
+  .dob .field{
+    padding-left: 20px;
+  }
+  .dob .dob-label{
+    margin: 30px 0px 0 20px;
+    font-size: 25px;
+  } */
+  
+  
+  .form-container .form-inner form{
+    width: 50%;
+    transition: 0.5s;
+  }
+  .form-inner form .field{
+    height: 50px;
+    margin-top: 20px;
+  }
+  .form-inner form .field input{
+      width:550px;
+    height: 50px;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(177, 167, 167);
+    font-size: 20px;
+    transition: 0.5s;
+  }
+  .form-inner form .field input:focus{
+    border-color: #4158d0;
+   }
+  .form-inner form .field input::placeholder{
+    color: rgb(172, 165, 165);
+  }
+  
+  .form-inner form .field date{
+    color: antiquewhite;
+  }
+  
+  form .btn input[type="submit"]{
+    height: 50px;
+    width: 325px;
+    position: relative;
+    background: #4158d0;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  #tarea{
+      height:50px;
+      width:600px;
+      margin-top: 10px;
+      border-radius: 10px;
+  }
+  .duration{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .testbtn {
+    font-family: helvetica;
+    font-weight: bold;
+    color: #FFFAFC !important;
+    font-size: 16px;
+    text-shadow: 3px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid #3866A3;
+    background: #63B8EE;
+    background: linear-gradient(to top, #63B8EE, #468CCF);
+    margin-top:20px;
+  }
+  .testbtn:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(to top, #468CCF, #63B8EE);
+  }

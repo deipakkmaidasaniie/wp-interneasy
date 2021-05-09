@@ -1,8 +1,10 @@
 <!--
     Author: Ravi Shankar
     Date Created: 09/04/2019
-    Description: This html page is used to design the Recruiter-Signup Page of Udyog.com
+    Description: This html page is used to design the Recruiter-Signup Page of interneasy.com
 -->
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +22,7 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <h2 class="text-white">Udyog.com - Student Profile</h2>
+        <h2 class="text-white">interneasy.com - Student Profile</h2>
 
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
@@ -118,4 +120,109 @@
         crossorigin="anonymous"></script>
 </body>
 
+</html>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>viewProfile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/viewProfile.css">
+                <link rel="stylesheet" href="CSS/index_css.css">
+
+
+    </head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo">InternEasy</a>
+        <div class="header-right">
+          
+         <a href="/studentDash" class="text-white navbar-brand">Home</a>
+                    
+                     <a href="/studentProfile"
+                            class="text-white navbar-brand">View Profile</a>
+                    
+                     <a href="/studentProfileForm"
+                            class="text-white navbar-brand">Edit
+                            Profile</a> 
+                     <a href="/studentLogout"
+                            class="text-white navbar-brand">Logout</a>       
+                
+      
+        </div>
+      </div>
+<div class="profile">
+    <fieldset>
+        <legend><h2>Student Details</h2></legend>
+        <input type="text" disabled id="f1" value="{{student.userName}}"> <br><br>
+        <input type="date" disabled id="f2" value="{{student.dob}}"><h5></h5><br><br>
+        <input type="text" disabled id="f3"><br><br>
+        <input type="text" disabled id="f4"><br><br>
+    </fieldset>
+    <script>
+       var field=document.getElementById("f1");      
+    </script>
+    <fieldset>
+        <legend><h2>Academic details</h2></legend>
+        <input type="text" disabled id="f5" value="{{student.education}}"><br><br>
+        <input type="text" disabled id="f6"><br><br>
+        <input type="number" disabled id="f7"><br><br>
+        <input type="date" disabled id="f8"><br><br>
+        <input type="date" disabled id="f9"><br><br>
+    </fieldset>
+    <fieldset>
+        <legend><h2>Skills & Abilities</h2></legend>
+        <textarea disabled id="f10" rows="5" cols="30" value="{{student.keySkills}}"></textarea><br><br>
+        <textarea disabled id="f11" rows="5" cols="30" value="{{student.summary}}"></textarea><br><br>
+        <textarea disabled id="f12" rows="5" cols="30" value="{{student.projects}}"></textarea><br><br>
+        <textarea disabled id="f13" rows="5" cols="30" value="{{student.achievements}}"></textarea><br><br>
+    </fieldset>
+    <fieldset>
+        <legend><h2>Experience</h2></legend>
+        <input type="text" disabled id="f14" value="{{student.experience}}"><br><br>
+        <input type="text" disabled id="f15"><br><br>
+        <textarea disabled id="f16" rows="5" cols="30"></textarea><br><br>
+        <input type="date" disabled id="f17"><br><br>
+        <input type="date" disabled id="f18"><br><br>
+    </fieldset>
+
+    <div class="col-md-4">
+                <img style="margin-top: 20px" src="{{student.imagePath}}" alt="" height="180px"
+                    width="180px">
+                <br>
+                <br>
+                <button class="btn btn-secondary">
+                    <a style="color:white"="_blank"
+                        href="{{student.resumePath}}">View Resume</a>
+                </button>
+            </div>
+</div>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+
+</body>
 </html>

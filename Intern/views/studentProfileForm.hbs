@@ -1,7 +1,6 @@
 <!--
     Author: Ravi Shankar
     Date Created: 09/04/2019
-    Description: This html page is used to design the Recruiter-Signup Page of Udyog.com
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,44 +14,33 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/studentProfileForm.css">
-    <title>Udyog.com - Student Profile Form</title>
+        <link rel="stylesheet" href="CSS/index_css.css">
+
+
+    <title> Student Profile Form</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <h2 class="text-white">Udyog.com - Student Profile Form</h2>
-
-        <div class="pos-f-t">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-dark p-4">
-                    <h5> <a href="/studentDash" class="text-white navbar-brand">Home</a>
-                    </h5>
-                    <h5> <a href="/studentProfile" class="text-white navbar-brand">
-                            Profile</a> </h5>
-                    <h5> <a href="/studentLogout" class="text-white navbar-brand">Logout</a>
-                    </h5>
-                </div>
-            </div>
-            <nav class="navbar navbar-dark bg-dark">
-                <button class="navbar-toggler" type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarToggleExternalContent"
-                    aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
+    <div class="header" style="width:100%">
+        <a href="#default" class="logo">InternEasy</a>
+        <div class="header-right">
+          <a href="/studentDash">Home</a>
+          <a href="/studentProfile">View Profile</a>
+          <a href="/studentLogout">Logout</a>
+      
         </div>
-    </nav>
+      </div>
 
-    <div class="container-fluid">
+
+
+    <div class="container-fluid" style="background-color: lightskyblue;">
 
         <div class="row">
             <div class="offset-md-4 col-md-4">
                 <div class="row">
+                    <h2 style="text-decoration: underline; font-family:Georgia, 'Times New Roman', Times, serif ;">Enter Details</h2><br><br>
                     <form action="/studentProfile" method="POST" enctype="multipart/form-data">
 
-                        <p></p>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Mail</label>
                             <input type="text" class="form-control" id="mail" name="mail"
@@ -132,12 +120,13 @@
                                 name="projects" id="projects"
                                 placeholder="Enter Projects">
                         </div>
-
+                    
                         <div>
                             <p></p>
                             <button type="submit" id="submit" name="submit"
                                 class="btn btn-secondary">Submit</button>
                         </div>
+
 
                     </form>
                 </div>

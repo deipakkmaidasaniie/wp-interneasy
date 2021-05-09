@@ -1,8 +1,3 @@
-<!--
-    Author: Ravi Shankar
-    Date Created: 09/04/2019
-    Description: This html page is used to design the Student-Signup Page of Udyog.com
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,13 +9,25 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
-    <title>Udyog.com - Student Signup</title>
+    <title>Student Signup</title>
+
+    <link rel="stylesheet" href="CSS/index_css.css">
+    
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <h2 class="text-white">Udyog.com - Student Signup</h2>
+    <div class="header" style="width:100%">
+        <a href="#default" class="logo">InternEasy</a>
+        <div class="header-right">
+          <a class="active" href="/">Home</a>
+          <a href="/">Login</a>
+      
+        </div>
+      </div>
+   <!-- <nav class="navbar navbar-dark bg-dark">
+        <h2 class="text-white">interneasy.com - Student Signup</h2>
 
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
@@ -41,7 +48,7 @@
                 </button>
             </nav>
         </div>
-    </nav>
+    </nav>-->
 
     <br>
 
@@ -69,13 +76,34 @@
                     <p></p>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
+                        <label for="exampleInputEmail1">Email Id</label>
                         <input type="email" class="form-control" id="userName"
                             name="userName" aria-describedby="emailHelp"
                             placeholder="Enter email">
                         <small id="emailHelp" class="form-text text-muted">We'll
                             never share your email with anyone else.</small>
                     </div>
+
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">Full Name</label>
+                        <input type="text" class="form-control" id="name"
+                            name="name" aria-describedby="emailHelp"
+                            placeholder="Enter Name">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">Date Of Birth</label>
+                        <input type="date" class="form-control" id="dob"
+                            name="dob" aria-describedby="emailHelp"
+                            placeholder="Enter Dob"></div>
+
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">City</label>
+                        <input type="text" class="form-control" id="city"
+                            name="city" aria-describedby="emailHelp"
+                            placeholder="Enter City">
+                    </div>      
+
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control"
@@ -95,6 +123,7 @@
                             class="btn btn-secondary">Sign Up</button>
                     </div>
 
+                   
                 </form>
             </div>
         </div>

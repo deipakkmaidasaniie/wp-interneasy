@@ -1,39 +1,29 @@
-<!--
-    Author: Srinivas Namballa
-    Date Created: 09/04/2019
-    Description: This html page is used to display the Students Dashboard of Udyog.com
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Udyog.com - Student Dashboard</title>
+    <title>interneasy.com - Student Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/studentDashboard.css">
+        <link rel="stylesheet" href="CSS/internships-style.css">
+        <link rel="stylesheet" href="CSS/index_css.css">
+        
+
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <h2 class="text-white">Udyog.com - Student Dashboard</h2>
-
-        <div class="pos-f-t">
-            <div class="collapse" id="navbarToggleExternalContent">
-              <div class="bg-dark p-4">
-                <h5> <a href="/studentDash" class="text-white navbar-brand">Home</a> </h5>
-                <h5> <a href="/studentProfile" class="text-white navbar-brand">View Profile</a> </h5>
-                <h5> <a href="/studentProfileForm" class="text-white navbar-brand">Edit Profile</a> </h5>
-                <h5> <a href="/studentLogout" class="text-white navbar-brand">Logout</a> </h5>
-              </div>
-            </div>
-            <nav class="navbar navbar-dark bg-dark">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </nav>
+    <div style="background-color: lightskyblue;">
+    <div class="header" style="width:100%">
+        <a href="#default" class="logo">InternEasy</a>
+        <div class="header-right">
+          <a href="/studentDash">Home</a>
+          <a href="/studentProfile">View Profile</a>
+          <a href="/studentProfileForm">Edit Profile</a>
+          <a href="/studentLogout">Logout</a>
+      
         </div>
-    </nav>
+      </div>
 
     <p></p>
 
@@ -43,30 +33,60 @@
                 <form class="form-inline">
                     <div class="form-group mb-2">
                         <label class="sr-only">search</label>
-                        <input type="text" class="form-control form-control-lg" id="inputSearch" name="searchJobs" placeholder="Search jobs by skills, designation etc.">
+                        <input type="text" class="form-control form-control-lg" id="inputSearch" name="searchJobs" placeholder="Search Internships by skills, designation etc.">
                     </div>
                     <button type="submit" class="btn btn-secondary mx-sm-5 mb-2">Search</button>
                 </form>
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Recommended Jobs</th>
-                        </tr>
-                    </thead>
+                    <button class="btn btn-secondary mx-sm-5 mb-2">Recommended Internships</button>
+                {{#each jobs}}
+                 
+                          <div class="internships">
+                <div class="card">
+            <div class="intern-title">
+                <div class="job-title">
+                    <p>{{jobTitle}}</p>
+                </div>
+                <div class="company-name">
+                    <p style="padding: 10px;">Name of the company</p>
+                </div>
+                <div class="place">
+                    <h3>{{location}}</h3>
+                </div>
+            </div>
+            <div class="intern-desc">
+                <div class="start-date">
+                    <span class="label">START DATE</span><br>
+                    25/05/2021
+                </div>
+                <div class="last-date">
+                    <span class="label">APPLY BY</span><br>
+                    10/05/2021
+                </div>
+                <div class="stipend">
+                    <span class="label">STIPEND</span><br>
+                    5000
+                </div>
+                <div class="duration">
+                    <span class="label">DURATION</span><br>
+                    3 months
+                </div>
+            </div>
 
-                    <tbody>
-                        <tr>
-                            <td>
+            <div class="apply">
+             <a class="btn btn-secondary" href="/studentApply/{{_id}}">APPLY</a>  
+            </div>
+        </div>
+        </div>
+                    
+                    
+{{/each}}
                                 {{#each jobs}}
                                 <a class="btn btn-secondary" href="/studentApply/{{_id}}">  
                                     {{jobTitle}} &nbsp; &nbsp;  {{keySkills}} &nbsp; &nbsp; {{location}} 
                                 </a>
                                 <p></p>
                                 {{/each}}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                           
             </div>
 
             <div class="offset-md-1 col-md-2" id="profilePic">
@@ -77,32 +97,8 @@
 
         </div>
             
-        <div class="row">
-            <div class="col-md-9">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Top Companies Hiring</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>
-                                <a href=""><img src="Images/Amazon-logo.jpg" alt="Amazon-logo" class="topCompanies"></a>
-                                
-                                <a href=""><img src="Images/tata-consultancy-services-tcs-logo.png" alt="TCS-logo" class="topCompanies"></a>
-                                <p></p>
-                                <a href=""><img src="Images/capgemini-logo.jpg" alt="Capgemini-logo" class="topCompanies"></a>
-
-                                <a href=""><img src="Images/Infosys-logol.jpg" alt="Infosys-logo" class="topCompanies"></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
-        </div>
-    </div>
+            </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
